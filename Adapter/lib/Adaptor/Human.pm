@@ -11,8 +11,6 @@ has 'age' => (
     isa => 'Int',
 );
 
-__PACKAGE__->meta->make_immutable();
-
 sub print_name {
     my $self = shift;
     say $self->name;

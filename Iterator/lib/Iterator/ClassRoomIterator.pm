@@ -18,8 +18,6 @@ has 'index' => (
     },
 );
 
-__PACKAGE__->meta->make_immutable();
-
 sub has_next {
     my $self = shift;
     return $self->index < $self->class_room->get_length;

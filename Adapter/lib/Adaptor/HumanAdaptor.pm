@@ -17,8 +17,6 @@ around BUILDARGS => sub {
     $class->$orig( human => $human );
 };
 
-__PACKAGE__->meta->make_immutable();
-
 sub show_name {
     my $self = shift;
     $self->human->print_name;

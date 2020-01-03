@@ -6,5 +6,3 @@ has 'name' => (
     isa => 'Str',
     reader => 'get_name',
 );
-
-__PACKAGE__->meta->make_immutable();
