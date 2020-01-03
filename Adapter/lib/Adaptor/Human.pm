@@ -20,3 +20,5 @@ sub print_age {
     my $self = shift;
     say $self->age;
 }
+
+ __PACKAGE__->meta->make_immutable();

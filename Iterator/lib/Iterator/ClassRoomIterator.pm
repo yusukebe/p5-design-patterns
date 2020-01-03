@@ -1,6 +1,5 @@
 package Iterator::ClassRoomIterator;
 use Moose;
-use MooseX::AttributeHelpers;
 
 with 'Iterator::Iterator';
 
@@ -9,12 +8,12 @@ has 'class_room' => (
     isa => 'Iterator::ClassRoom',
 );
 has 'index' => (
-    metaclass => 'Counter',
+    traits    => ['Counter'],
     is        => 'ro',
     isa       => 'Num',
     default   => sub { 0 },
-    provides  => {
-        inc => 'increment_index',
+    handles  => {
+        increment_index => 'inc',
     },
 );
 
@@ -29,3 +28,5 @@ sub next {
     $self->increment_index;
     return $student;
 }
+
+__PACKAGE__->meta->make_immutable();
