@@ -18,7 +18,7 @@ has 'students' => (
 
 sub iterator {
     my $self = shift;
-    Iterator::ClassRoomIterator->new( class_room => $self );
+    return Iterator::ClassRoomIterator->new( class_room => $self );
 }
 
 __PACKAGE__->meta->make_immutable();
