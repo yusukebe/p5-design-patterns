@@ -1,4 +1,4 @@
-package TemplateMethod::AbstractMonster;
+package Monster;
 use Moose::Role;
 use feature qw/say/;
 
