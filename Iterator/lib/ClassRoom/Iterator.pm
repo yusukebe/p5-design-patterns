@@ -1,11 +1,11 @@
-package Iterator::ClassRoomIterator;
+package ClassRoom::Iterator;
 use Moose;
 
-with 'Iterator::Iterator';
+with 'Role::Iterator';
 
 has 'class_room' => (
     is  => 'ro',
-    isa => 'Iterator::ClassRoom',
+    isa => 'ClassRoom',
 );
 has 'index' => (
     traits    => ['Counter'],
@@ -23,10 +23,10 @@ sub has_next {
 }
 
 sub next {
-    my $self    = shift;
+    my $self = shift;
     my $student = $self->class_room->get_student_at( $self->index );
     $self->increment_index;
     return $student;
 }
 
-__PACKAGE__->meta->make_immutable();
+__PACKAGE__->meta->make_immutable;

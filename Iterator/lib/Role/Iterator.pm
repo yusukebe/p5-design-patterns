@@ -1,4 +1,4 @@
-package Iterator::Iterator;
+package Role::Iterator;
 use Moose::Role;
 
 requires 'has_next';

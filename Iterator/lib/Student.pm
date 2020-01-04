@@ -1,4 +1,4 @@
-package Iterator::Student;
+package Student;
 use Moose;
 
 has 'name' => (
@@ -7,4 +7,4 @@ has 'name' => (
     reader => 'get_name',
 );
 
-__PACKAGE__->meta->make_immutable();
+__PACKAGE__->meta->make_immutable;

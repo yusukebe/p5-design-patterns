@@ -1,13 +1,13 @@
-package Iterator::ClassRoom;
+package ClassRoom;
 use Moose;
-use Iterator::ClassRoomIterator;
+use ClassRoom::Iterator;
 
-with 'Iterator::Aggregate';
+with 'Role::Aggregate';
 
 has 'students' => (
     traits   => ['Array'],
     is       => 'ro',
-    isa      => 'ArrayRef[Iterator::Student]',
+    isa      => 'ArrayRef[Student]',
     default  => sub { [] },
     handles  => {
         append_student => 'push',
@@ -18,7 +18,7 @@ has 'students' => (
 
 sub iterator {
     my $self = shift;
-    return Iterator::ClassRoomIterator->new( class_room => $self );
+    return ClassRoom::Iterator->new( class_room => $self );
 }
 
-__PACKAGE__->meta->make_immutable();
+__PACKAGE__->meta->make_immutable;
