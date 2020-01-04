@@ -15,7 +15,7 @@ around BUILDARGS => sub {
     my $class  = shift;
     my %params = @_;
     say "Make card for $params{owner}.";
-    return $class->$orig(@_);
+    return $class->$orig(%params);
 };
 
 sub use {
