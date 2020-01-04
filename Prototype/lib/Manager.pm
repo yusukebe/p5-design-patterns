@@ -1,10 +1,11 @@
 package Manager;
 use Moose;
+use Product;
 
 has 'showcase' => (
     traits  => ['Hash'],
     is      => 'ro',
-    isa     => 'HashRef',
+    isa     => 'HashRef[Product]',
     default => sub { {} },
     handles => {
         set_product => 'set',
