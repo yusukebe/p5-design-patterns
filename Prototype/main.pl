@@ -1,14 +1,14 @@
 use strict;
 use warnings;
 use lib 'lib';
-use Prototype::Manager;
-use Prototype::Product::UnderlinePen;
-use Prototype::Product::MessageBox;
+use Manager;
+use Product::UnderlinePen;
+use Product::MessageBox;
 
-my $manager = Prototype::Manager->new;
-my $upen = Prototype::Product::UnderlinePen->new( char => '~' );
-my $mbox = Prototype::Product::MessageBox->new( char => '*' );
-my $pbox = Prototype::Product::MessageBox->new( char => '+' );
+my $manager = Manager->new;
+my $upen = Product::UnderlinePen->new( char => '~' );
+my $mbox = Product::MessageBox->new( char => '*' );
+my $pbox = Product::MessageBox->new( char => '+' );
 $manager->register('strong message', $upen);
 $manager->register('warning box', $mbox);
 $manager->register('slash box', $pbox);
