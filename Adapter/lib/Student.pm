@@ -1,4 +1,4 @@
-package Adaptor::Student;
+package Student;
 use Moose::Role;
 
 requires 'show_name';

@@ -1,8 +1,8 @@
 use strict;
 use warnings;
 use lib 'lib';
-use Adaptor::HumanAdaptor;
+use HumanAdaptor;
 
-my $student = Adaptor::HumanAdaptor->new( name => 'Tanaka', age => 25 );
+my $student = HumanAdaptor->new( name => 'Tanaka', age => 25 );
 $student->show_name();
 $student->show_age();

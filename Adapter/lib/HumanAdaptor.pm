@@ -1,19 +1,18 @@
-package Adaptor::HumanAdaptor;
+package HumanAdaptor;
 use Moose;
-use Adaptor::Human;
+use Human;
 
-with 'Adaptor::Student';
+with 'Student';
 
 has 'human' => (
     is  => 'ro',
-    isa => 'Adaptor::Human',
+    isa => 'Human',
 );
 
 around BUILDARGS => sub {
     my $orig   = shift;
     my $class  = shift;
-    my %params = @_;
-    my $human  = Adaptor::Human->new(%params);
+    my $human = Human->new(@_);
     $class->$orig( human => $human );
 };
 
@@ -27,4 +26,4 @@ sub show_age {
     $self->human->print_age;
 }
 
-__PACKAGE__->meta->make_immutable();
+__PACKAGE__->meta->make_immutable;
