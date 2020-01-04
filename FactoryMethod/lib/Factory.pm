@@ -1,4 +1,4 @@
-package FactoryMethod::Factory;
+package Factory;
 use Moose::Role;
 
 requires 'create_product';

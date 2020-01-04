@@ -1,4 +1,4 @@
-package FactoryMethod::Product;
+package Product;
 use Moose::Role;
 
 requires 'use';

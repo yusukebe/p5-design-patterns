@@ -1,8 +1,8 @@
-package FactoryMethod::IDCard;
+package Product::IDCard;
 use Moose;
 use feature qw/say/;
 
-with 'FactoryMethod::Product';
+with 'Product';
 
 has 'owner' => (
     is     => 'ro',
@@ -14,7 +14,7 @@ around BUILDARGS => sub {
     my $orig   = shift;
     my $class  = shift;
     my %params = @_;
-    say sprintf( "Make card for %s.", $params{owner} );
+    say "Make card for $params{owner}.";
     return $class->$orig(@_);
 };
 
@@ -23,4 +23,4 @@ sub use {
     say sprintf( "Use card for %s.", $self->get_owner );
 }
 
-__PACKAGE__->meta->make_immutable();
+__PACKAGE__->meta->make_immutable;

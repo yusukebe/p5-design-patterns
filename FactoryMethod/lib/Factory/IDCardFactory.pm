@@ -1,8 +1,8 @@
-package FactoryMethod::IDCardFactory;
+package Factory::IDCardFactory;
 use Moose;
-use FactoryMethod::IDCard;
+use Product::IDCard;
 
-with 'FactoryMethod::Factory';
+with 'Factory';
 
 has 'owners' => (
     traits  => ['Array'],
@@ -17,7 +17,7 @@ has 'owners' => (
 
 sub create_product {
     my ( $self, $owner ) = @_;
-    return FactoryMethod::IDCard->new( owner => $owner );
+    return Product::IDCard->new( owner => $owner );
 }
 
 sub register_product {
@@ -26,4 +26,4 @@ sub register_product {
     $self->add_owner($owner);
 }
 
-__PACKAGE__->meta->make_immutable();
+__PACKAGE__->meta->make_immutable;

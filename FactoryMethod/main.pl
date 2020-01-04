@@ -1,9 +1,9 @@
 use strict;
 use warnings;
 use lib 'lib';
-use FactoryMethod::IDCardFactory;
+use Factory::IDCardFactory;
 
-my $factory = FactoryMethod::IDCardFactory->new;
+my $factory = Factory::IDCardFactory->new;
 my $card1 = $factory->create('Yamada');
 my $card2 = $factory->create('Suzuki');
 my $card3 = $factory->create('Sato');
