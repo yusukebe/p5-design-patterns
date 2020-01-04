@@ -1,4 +1,4 @@
-package Singleton::Singleton;
+package Singleton;
 use feature qw/say/;
 use Moose;
 # use MooseX::Singleton;
@@ -17,4 +17,4 @@ sub get_instance {
     return $_singleton;
 }
 
-__PACKAGE__->meta->make_immutable();
+__PACKAGE__->meta->make_immutable;
