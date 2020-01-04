@@ -1,6 +1,7 @@
 package Singleton::Singleton;
 use feature qw/say/;
 use Moose;
+# use MooseX::Singleton;
 
 my $_singleton;
 
