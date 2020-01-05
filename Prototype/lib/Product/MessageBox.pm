@@ -15,7 +15,7 @@ sub use {
         print $self->char;
     }
     print "\n";
-    print sprintf( "%s%s%s\n", $self->char, $string, $self->char );
+    printf( "%s%s%s\n", $self->char, $string, $self->char );
     for ( my $i = 0 ; $i < $length + 2 ; $i++ ) {
         print $self->char;
     }

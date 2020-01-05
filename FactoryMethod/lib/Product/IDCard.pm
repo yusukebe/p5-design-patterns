@@ -1,6 +1,5 @@
 package Product::IDCard;
 use Moose;
-use feature qw/say/;
 
 with 'Product';
 
@@ -14,13 +13,13 @@ around BUILDARGS => sub {
     my $orig   = shift;
     my $class  = shift;
     my %params = @_;
-    say "Make card for $params{owner}.";
+    print "Make card for $params{owner}.\n";
     return $class->$orig(%params);
 };
 
 sub use {
     my $self = shift;
-    say sprintf( "Use card for %s.", $self->get_owner );
+    printf( "Use card for %s.\n", $self->get_owner );
 }
 
 __PACKAGE__->meta->make_immutable();

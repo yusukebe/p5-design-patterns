@@ -21,7 +21,7 @@ requires 'make_html';
 
 sub output {
     my $self = shift;
-    print sprintf( "%s\n", $self->make_html() );
+    printf( "%s\n", $self->make_html() );
 }
 
 1;
