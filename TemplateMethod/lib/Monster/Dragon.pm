@@ -11,4 +11,4 @@ sub get_defence {
     return 45;
 }
 
-__PACKAGE__->meta->make_immutable;
+__PACKAGE__->meta->make_immutable();
