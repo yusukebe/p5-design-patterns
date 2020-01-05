@@ -23,4 +23,4 @@ sub use {
     say sprintf( "Use card for %s.", $self->get_owner );
 }
 
-__PACKAGE__->meta->make_immutable;
+__PACKAGE__->meta->make_immutable();

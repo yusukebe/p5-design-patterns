@@ -28,4 +28,4 @@ sub close {
     $self->append_text("</body></html>\n");
 }
 
-__PACKAGE__->meta->make_immutable;
+__PACKAGE__->meta->make_immutable();

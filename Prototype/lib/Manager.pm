@@ -21,7 +21,7 @@ sub register {
 sub create {
     my ( $self, $name ) = @_;
     my $product = $self->get_product($name);
-    return $product->create_clone;
+    return $product->create_clone();
 }
 
-__PACKAGE__->meta->make_immutable;
+__PACKAGE__->meta->make_immutable();

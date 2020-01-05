@@ -7,4 +7,4 @@ has 'name' => (
     reader => 'get_name',
 );
 
-__PACKAGE__->meta->make_immutable;
+__PACKAGE__->meta->make_immutable();

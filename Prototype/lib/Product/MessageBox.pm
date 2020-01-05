@@ -22,4 +22,4 @@ sub use {
     print "\n";
 }
 
-__PACKAGE__->meta->make_immutable;
+__PACKAGE__->meta->make_immutable();

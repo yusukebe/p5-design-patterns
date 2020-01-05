@@ -26,4 +26,4 @@ sub show_age {
     $self->human->print_age;
 }
 
-__PACKAGE__->meta->make_immutable;
+__PACKAGE__->meta->make_immutable();

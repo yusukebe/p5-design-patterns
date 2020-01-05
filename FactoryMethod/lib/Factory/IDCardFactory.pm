@@ -26,4 +26,4 @@ sub register_product {
     $self->add_owner($owner);
 }
 
-__PACKAGE__->meta->make_immutable;
+__PACKAGE__->meta->make_immutable();

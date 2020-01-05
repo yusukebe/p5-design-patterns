@@ -19,14 +19,14 @@ has 'index' => (
 
 sub has_next {
     my $self = shift;
-    return $self->index < $self->class_room->get_length;
+    return $self->index < $self->class_room->get_length();
 }
 
 sub next {
     my $self = shift;
     my $student = $self->class_room->get_student_at( $self->index );
-    $self->increment_index;
+    $self->increment_index();
     return $student;
 }
 
-__PACKAGE__->meta->make_immutable;
+__PACKAGE__->meta->make_immutable();

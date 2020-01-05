@@ -17,4 +17,4 @@ sub get_instance {
     return $_singleton;
 }
 
-__PACKAGE__->meta->make_immutable;
+__PACKAGE__->meta->make_immutable();

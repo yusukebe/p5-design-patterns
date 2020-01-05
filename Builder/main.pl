@@ -12,7 +12,7 @@ if ( $format eq 'plain' ) {
     my $text_builder = Builder::TextBuilder->new();
     my $guide = Guide->new( builder => $text_builder );
     $guide->construct();
-    my $result = $text_builder->get_result;
+    my $result = $text_builder->get_result();
     say $result;
 } elsif ( $format eq 'html' ) {
     my $html_builder = Builder::HTMLBuilder->new();

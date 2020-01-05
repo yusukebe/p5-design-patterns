@@ -14,5 +14,5 @@ $class_room->append_student( Student->new( name => 'Sato' ) );
 my $iterator = $class_room->iterator();
 while ( $iterator->has_next() ) {
     my $student = $iterator->next();
-    say $student->get_name;
+    say $student->get_name();
 }

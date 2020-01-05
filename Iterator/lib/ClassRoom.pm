@@ -21,4 +21,4 @@ sub iterator {
     return ClassRoom::Iterator->new( class_room => $self );
 }
 
-__PACKAGE__->meta->make_immutable;
+__PACKAGE__->meta->make_immutable();

@@ -21,4 +21,4 @@ sub print_age {
     say $self->age;
 }
 
-__PACKAGE__->meta->make_immutable;
+__PACKAGE__->meta->make_immutable();
