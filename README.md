@@ -1,6 +1,6 @@
 # p5-design-patterns
 
-* GoF Desing Pattern Perl implementation
+* GoF Desing Patterns in Perl
 * Java implamentation: <https://github.com/i-tanaka730/design_pattern>
 * Using Moose and Moose::Role.
 
